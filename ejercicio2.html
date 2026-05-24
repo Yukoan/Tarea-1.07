@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2 - Selector Descendiente</title>
+  <style>
+    /* Selector descendiente: aplica a TODOS los em dentro de div,
+       sin importar cuán profundo estén */
+    div em {
+      color: green;
+      font-style: italic;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejercicio 2 - Selector Descendiente (div em)</h2>
+
+  <div>
+    <em>Importante:</em>
+    <p>
+      Toma en cuenta lo siguiente:
+      <em>esto es fundamental</em>
+      para el examen.
+    </p>
+  </div>
+
+  <p>
+    El selector <code>div em</code> afecta a <strong>ambos</strong> elementos 
+    <code>em</code> porque los dos son descendientes del <code>div</code>, 
+    sin importar el nivel de profundidad.
+  </p>
+</body>
+</html>

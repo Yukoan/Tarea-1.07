@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3 - Selector Hermanos Adyacentes</title>
+  <style>
+    /* Selector hermano adyacente: solo afecta al primer em 
+       que aparece INMEDIATAMENTE después de un p */
+    p + em {
+      color: green;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejercicio 3 - Selector Hermanos Adyacentes (p + em)</h2>
+
+  <div>
+    <p>Este es un párrafo introductorio.</p>
+    <em>Este mensaje es importante y aparece justo después del párrafo.</em>
+    <em>Este otro mensaje no debe verse afectado.</em>
+  </div>
+
+  <p>
+    El selector <code>p + em</code> solo afecta al <code>em</code> que está 
+    <strong>inmediatamente después</strong> del <code>p</code>. 
+    El segundo <code>em</code> no se ve afectado porque ya no es adyacente al <code>p</code>.
+  </p>
+</body>
+</html>

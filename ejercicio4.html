@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudoclases en Enlaces</title>
+  <style>
+    /* Estilo general para todos los links no visitados */
+    a:link {
+      color: navy;
+      text-decoration: none;
+    }
+
+    /* Enlaces visitados */
+    a:visited {
+      color: gray;
+    }
+
+    /* Cuando se pasa el mouse sobre el enlace */
+    a:hover {
+      color: orange;
+      text-decoration: underline;
+    }
+
+    /* Cuando el enlace tiene el foco (por ejemplo, al tabular) */
+    a:focus {
+      outline: 2px dashed blue;
+    }
+
+    /* Cuando se hace clic sobre el enlace */
+    a:active {
+      color: red;
+    }
+
+    /* Segundo enlace con clase personalizada */
+    .llamativo:link {
+      color: white;
+      background-color: purple;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .llamativo:hover {
+      background-color: hotpink;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    .llamativo:active {
+      background-color: darkred;
+      color: white;
+    }
+
+    /* ===== TERCER ENLACE - Estilo personalizado propio ===== */
+    .mi-enlace:link {
+      color: #fff;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-family: 'Georgia', serif;
+      font-size: 1em;
+      letter-spacing: 1px;
+      border: 2px solid #0f3460;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(15, 52, 96, 0.4);
+    }
+
+    .mi-enlace:visited {
+      color: #a0aec0;
+      background: linear-gradient(135deg, #2d3748, #1a202c);
+    }
+
+    .mi-enlace:hover {
+      background: linear-gradient(135deg, #0f3460, #533483);
+      color: #f7c948;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(83, 52, 131, 0.5);
+      letter-spacing: 2px;
+    }
+
+    .mi-enlace:focus {
+      outline: 3px solid #f7c948;
+      outline-offset: 4px;
+    }
+
+    .mi-enlace:active {
+      background: linear-gradient(135deg, #533483, #0f3460);
+      transform: translateY(1px);
+      box-shadow: 0 2px 8px rgba(83, 52, 131, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pseudoclases en Enlaces</h2>
+
+  <p><a href="https://www.ejemplo1.com" target="_blank">Enlace básico</a></p>
+
+  <p><a href="https://www.ejemplo2.com" class="llamativo" target="_blank">Enlace llamativo</a></p>
+
+  <p>
+    <a href="https://www.ejemplo3.com" class="mi-enlace" target="_blank">
+      Mi nombre es: Patrick Méndez García
+    </a>
+  </p>
+
+  <hr>
+
+  <h3>Explicación de las Pseudoclases</h3>
+  <ul>
+    <li><strong>a:link</strong> — Estilo del enlace que <em>aún no ha sido visitado</em>.</li>
+    <li><strong>a:visited</strong> — Estilo cuando el enlace <em>ya fue visitado</em> anteriormente.</li>
+    <li><strong>a:hover</strong> — Estilo cuando el usuario <em>pasa el mouse</em> sobre el enlace.</li>
+    <li><strong>a:focus</strong> — Estilo cuando el enlace <em>tiene el foco</em> (por teclado o tab).</li>
+    <li><strong>a:active</strong> — Estilo <em>en el momento exacto del clic</em> sobre el enlace.</li>
+  </ul>
+  <p>
+    <strong>Nota importante:</strong> El orden correcto para aplicar estas pseudoclases es 
+    <code>link → visited → hover → focus → active</code> para evitar que unos estilos 
+    sobreescriban a otros (regla mnemotécnica: <em>LoVe FocA</em>).
+  </p>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 6 - Galería con Flexbox</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 8px;
+      color: #f0c040;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    p.sub {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 28px;
+    }
+
+    /* Galería con flexbox */
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .tarjeta {
+      flex: 0 1 200px;
+      background-color: #2c2c2c;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(240,192,64,0.25);
+    }
+
+    .tarjeta img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .tarjeta .caption {
+      padding: 10px;
+      font-size: 0.85em;
+      color: #ccc;
+      text-align: center;
+      background-color: #222;
+      border-top: 2px solid #f0c040;
+    }
+
+    .tarjeta .caption strong {
+      display: block;
+      color: #f0c040;
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Galería de Imágenes</h2>
+  <p class="sub">Maquetación con Flexbox</p>
+
+  <div class="galeria">
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/nature1/400/300" alt="Naturaleza">
+      <div class="caption"><strong>Naturaleza</strong>Bosque en primavera</div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/city1/400/300" alt="Ciudad">
+      <div class="caption"><strong>Ciudad</strong>Skyline nocturno</div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/ocean1/400/300" alt="Océano">
+      <div class="caption"><strong>Océano</strong>Playa al atardecer</div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/mountain1/400/300" alt="Montaña">
+      <div class="caption"><strong>Montaña</strong>Pico nevado</div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/animal1/400/300" alt="Animal">
+      <div class="caption"><strong>Fauna</strong>Vida silvestre</div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/desert1/400/300" alt="Desierto">
+      <div class="caption"><strong>Desierto</strong>Dunas al mediodía</div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/flower1/400/300" alt="Flores">
+      <div class="caption"><strong>Flora</strong>Jardín en flor</div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/river1/400/300" alt="Río">
+      <div class="caption"><strong>Río</strong>Corriente cristalina</div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/sky1/400/300" alt="Cielo">
+      <div class="caption"><strong>Cielo</strong>Nubes al amanecer</div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/forest2/400/300" alt="Selva">
+      <div class="caption"><strong>Selva</strong>Vegetación tropical</div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/lake1/400/300" alt="Lago">
+      <div class="caption"><strong>Lago</strong>Reflejo sereno</div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="https://picsum.photos/seed/coast1/400/300" alt="Costa">
+      <div class="caption"><strong>Costa</strong>Acantilados rocosos</div>
+    </div>
+
+  </div>
+
+</body>
+</html>

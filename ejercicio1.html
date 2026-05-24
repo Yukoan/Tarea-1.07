@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1 - Selector de Hijos</title>
+  <style>
+    /* Selector de hijos: solo aplica al em que es hijo directo de p */
+    p > em {
+      color: blue;
+      font-weight: bold;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejercicio 1 - Selector de Hijos (p > em)</h2>
+
+  <div>
+    <em>Importante:</em>
+    <p>
+      Toma en cuenta lo siguiente:
+      <em>esto es fundamental</em>
+      para el examen.
+    </p>
+  </div>
+
+  <p>
+    El selector <code>p &gt; em</code> solo afecta al <code>em</code> que es 
+    hijo directo de <code>p</code>. El primer <code>em</code> (dentro de div 
+    pero NO dentro de p) no se ve afectado.
+  </p>
+</body>
+</html>

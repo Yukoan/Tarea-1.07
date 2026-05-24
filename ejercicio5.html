@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 5 - Calculadora con Float</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8e8e8;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* Contenedor principal - usa float internamente */
+    .calculadora {
+      width: 260px;
+      background-color: #222;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Pantalla */
+    .pantalla {
+      width: 100%;
+      height: 55px;
+      background-color: #111;
+      color: #fff;
+      font-size: 1.8em;
+      text-align: right;
+      padding: 8px 12px;
+      border-radius: 5px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+      border: 1px solid #444;
+    }
+
+    /* Cada fila contiene floats */
+    .fila {
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    /* Botón base con float */
+    .btn {
+      float: left;
+      width: 52px;
+      height: 52px;
+      margin: 2px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #444;
+      color: #fff;
+    }
+
+    .btn:hover {
+      background-color: #555;
+    }
+
+    .btn-operador {
+      background-color: #f0a500;
+    }
+
+    .btn-operador:hover {
+      background-color: #ffb733;
+    }
+
+    .btn-igual {
+      background-color: #f0a500;
+    }
+
+    .btn-igual:hover {
+      background-color: #ffb733;
+    }
+
+    .btn-ac {
+      background-color: #999;
+      color: #000;
+    }
+
+    .btn-ac:hover {
+      background-color: #bbb;
+    }
+
+    /* Botón 0 ocupa el ancho de 2 botones */
+    .btn-cero {
+      width: 108px;
+    }
+
+    /* Clearfix */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Calculadora básica - Float</h2>
+
+  <div class="calculadora">
+
+    <div class="pantalla">0</div>
+
+    <div class="fila clearfix">
+      <button class="btn btn-ac">AC</button>
+      <button class="btn btn-ac">+/-</button>
+      <button class="btn btn-ac">%</button>
+      <button class="btn btn-operador">÷</button>
+    </div>
+
+    <div class="fila clearfix">
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn btn-operador">×</button>
+    </div>
+
+    <div class="fila clearfix">
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn btn-operador">-</button>
+    </div>
+
+    <div class="fila clearfix">
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn btn-operador">+</button>
+    </div>
+
+    <div class="fila clearfix">
+      <button class="btn btn-cero">0</button>
+      <button class="btn">.</button>
+      <button class="btn btn-igual">=</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
